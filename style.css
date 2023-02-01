@@ -121,3 +121,39 @@ body{
   opacity: .7;
   margin: 0 15px;
 }
+
+/*Desktop First, so we set mobile because original CSS is set for Desktop*/
+@media (max-width:700px){
+  html{
+  }
+  
+  #bottom-section{
+  }
+  
+  #bottom-left-section, #bottom-right-section, #card{
+    width: 100%;
+    height:auto;
+  }
+  
+}
+
+
+/*Mobile First, so we set Desktop CSS here because original CSS was set for Mobile. Not really, but we wan't to overwrite Desktop first Media*/
+@media (min-width:600px){
+  html{
+  }
+  
+  #bottom-section{
+  }
+  
+  #bottom-left-section, #bottom-right-section, #card{
+    width: 50%;
+    height:100%;
+  }
+  
+  #card{
+  width: 700px;
+  height: 500px;
+  }
+  
+}
