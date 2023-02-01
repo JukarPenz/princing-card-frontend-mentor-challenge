@@ -15,8 +15,7 @@ body{
 
 #card{
   box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.4);
-  width: 700px;
-  height: 500px;
+  width: 100%;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -26,7 +25,6 @@ body{
 
 #top-section{
   width: 100%;
-  height: 45%;
   padding: 35px;
 }
 
@@ -48,6 +46,8 @@ body{
   width: 100%;
   height: 55%;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 #bottom-section button{
@@ -68,21 +68,16 @@ body{
 }
 
 #bottom-left-section{
-  padding: 30px;  
   background-color: #2ab2af;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  vertical-align:top;
 }
-
 #bottom-right-section{
-  padding: 30px;  
   background-color: #2ebfbd;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  vertical-align:top;
+}
+#bottom-left-section, #bottom-right-section{
+  flex-basis: 50%;
+  /*flex-grow: 1;*/
+  padding: 30px;  
+  height: 100%;  
 }
 
 #bottom-right-section ul{
@@ -102,11 +97,11 @@ body{
 */
 
 #price-container{
+  display: flex;
+  align-items: center;
 }
 
 #price-container div{
-    display: inline-block;
-    vertical-align: center;
 }
 
 #price{
@@ -115,26 +110,10 @@ body{
 }
 
 #pricefq{
-  position: relative;
   top: -5px;
   font-size: .9rem;
   opacity: .7;
-  margin: 0 15px;
-}
-
-/*Desktop First, so we set mobile because original CSS is set for Desktop*/
-@media (max-width:700px){
-  html{
-  }
-  
-  #bottom-section{
-  }
-  
-  #bottom-left-section, #bottom-right-section, #card{
-    width: 100%;
-    height:auto;
-  }
-  
+  margin-left:15px;
 }
 
 
@@ -142,18 +121,17 @@ body{
 @media (min-width:600px){
   html{
   }
+    
+  #card{
+    width: 700px;
+    height: 500px;
+    margin: auto;
+  }
   
   #bottom-section{
-  }
-  
-  #bottom-left-section, #bottom-right-section, #card{
-    width: 50%;
-    height:100%;
-  }
-  
-  #card{
-  width: 700px;
-  height: 500px;
+    display:flex;
+    flex-direction: row;
   }
   
 }
+
