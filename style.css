@@ -139,7 +139,7 @@ body{
 
 
 /*Mobile First, so we set Desktop CSS here because original CSS was set for Mobile. Not really, but we wan't to overwrite Desktop first Media*/
-@media (min-width:600px){
+@media (min-width:900px){
   html{
   }
   
